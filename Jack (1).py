@@ -659,6 +659,14 @@ async def auto_reply(event):
 # ===== RUN =====
 
 def start_bot():
+    print("🔐 Connecting Telegram (SAFE MODE)...")
     client.start()
-    print("✅ Userbot Running (Owner-only commands)...")
+
+    print(f"🛡️ Warm-up {SAFE_WARMUP} seconds — NO ACTION")
+    time.sleep(SAFE_WARMUP)
+
+    print("🟢 SAFE MODE OFF — bot active now")
     client.run_until_disconnected()
+
+if __name__ == "__main__":
+    start_bot()

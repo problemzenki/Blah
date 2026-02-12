@@ -6,6 +6,7 @@ import os
 import sys
 import base64
 import string
+import shutil 
 import re
 import html
 from io import BytesIO
